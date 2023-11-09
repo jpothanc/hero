@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "name": "productstore",
+      "description": "Product Details sources from SMD and CDDS",
+      "group": "microservices",
+      "status": "healthy",
+      "error": "",
+      "link": "https://www.npmjs.com/package/react-draggable#draggable"
+    },
+    {
+      "name": "datastore",
+      "description": "Reference data sourced from various sources.",
+      "group": "microservices",
+      "status": "unhealthy",
+      "error": "Timeout error."
+    },
+    {
+      "name": "vision",
+      "description": "Order visiblity service",
+      "group": "microservices",
+      "status": "unknown",
+      "error": "No response."
+    },
+    {
+      "name": "validation-servive",
+      "description": "Order validation service",
+      "group": "microservices",
+      "status": "healthy",
+      "error": ""
+    },
+    {
+      "name": "smd",
+      "description": "Product Database",
+      "group": "databases",
+      "status": "healthy",
+      "error": ""
+    }
+  ]
+}

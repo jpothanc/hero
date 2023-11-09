@@ -1,0 +1,67 @@
+$primary-color: #051c29;
+
+.body {
+  background-color: rgba(20, 20, 20, 1);
+  font-family: "Segoe UI", sans-serif;
+  height: 100vh;
+  padding-top: 8ch;
+}
+
+h1 {
+  font-size: 44px;
+  color: $primary-color;
+}
+
+.container-wrap {
+  display: flex;
+  flex-wrap: wrap; /* Items can wrap to new lines */
+  column-gap: 2px;
+  padding: 20px;
+}
+
+.card-header-font {
+  font-size: 13px;
+  font-weight: 400px;
+}
+.card-font {
+  font-size: 12px;
+}
+.accordian-header-container {
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1cap;
+  font-size: 13px;
+  font-weight: 600;
+}
+@media (max-width: 925px) {
+  .accordian-header-container {
+    flex-direction: column;
+  }
+}
+
+.success {
+  color: green;
+}
+.danger {
+  color: red;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: fade-down 0.5s 0.4s backwards;
+}
+
+.postit {
+  min-height: 300px;
+  min-width: 300px;
+  width: 300px;
+  background-color: #fff9c4;
+  font: 10px;
+  color: black;
+}
