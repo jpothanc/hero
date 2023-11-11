@@ -22,12 +22,14 @@ const HealthInfoQuickDetails = ({ HealthCheckInfo, color, error }: Props) => {
             duration
           </Badge>
         </div>
-        <div className="hc-item" style={{ backgroundColor: color }}>
-          {error}&nbsp;
-          <Badge pill bg="light">
-            error
-          </Badge>
-        </div>
+        {error?.length > 0 && (
+          <div className="hc-item" style={{ backgroundColor: color }}>
+            {error}&nbsp;
+            <Badge pill bg="light" text="danger">
+              error
+            </Badge>
+          </div>
+        )}
       </div>
     </>
   );

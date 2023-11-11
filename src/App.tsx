@@ -9,8 +9,9 @@ import HealthCheckDashBoard from "./pages/HealthCheckDashBoard";
 const App = () => {
   return (
     <>
+      <HeroNavBar />
+
       <Router>
-        <HeroNavBar />
         <Routes>
           <Route path="/" element={<DashBoard />}></Route>
           <Route path="/about" element={<About />}></Route>
