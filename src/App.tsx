@@ -4,7 +4,7 @@ import HeroNavBar from "./components/HeroNavBar";
 import PersonalNotes from "./pages/PersonalNotes";
 import TeamNotes from "./pages/TeamNotes";
 import { Container, Navbar } from "react-bootstrap";
-import DashBoard from "./pages/DashBoard";
+
 import HealthCheckDashBoard from "./pages/HealthCheckDashBoard";
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
 
       <Router>
         <Routes>
-          <Route path="/" element={<DashBoard />}></Route>
+          <Route path="/" element={<HealthCheckDashBoard />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/health" element={<HealthCheckDashBoard />}></Route>
           <Route path="/p-notes" element={<PersonalNotes />}></Route>
