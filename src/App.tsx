@@ -3,7 +3,8 @@ import About from "./pages/About";
 import HeroNavBar from "./components/HeroNavBar";
 import PersonalNotes from "./pages/PersonalNotes";
 import TeamNotes from "./pages/TeamNotes";
-import { Container, Navbar } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
+import config from "./config.json";
 
 import HealthCheckDashBoard from "./pages/HealthCheckDashBoard";
 const App = () => {
@@ -20,9 +21,15 @@ const App = () => {
           <Route path="/t-notes" element={<TeamNotes />}></Route>
         </Routes>
         <Navbar fixed="bottom">
-          <Container>
-            <Navbar.Brand href="#">Footer</Navbar.Brand>
-          </Container>
+          <div className="footer">
+            <div className="footer__left">
+              Copyright © 2023 Jessish Pothancheri.|
+            </div>
+            <div className="footer__right">
+              {" "}
+              Connecting to {config.app.healthcheck.healthcheckRestEndpoint}
+            </div>
+          </div>
         </Navbar>
       </Router>
     </>

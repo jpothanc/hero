@@ -20,7 +20,7 @@ h1 {
 }
 
 .card-header-font {
-  font-size: 10px;
+  font-size: 12px;
   font: bold;
   display: flex;
   justify-content: space-between;
@@ -69,8 +69,8 @@ h1 {
 .hc-container__top_right_bar {
   display: flex;
   margin: 0px 0px 0px auto;
-  column-gap: 1px;
-  padding-right: 10px;
+  column-gap: 2px;
+  padding-right: 1px;
   //background-color: green;
 }
 
@@ -78,7 +78,8 @@ h1 {
   padding-left: 10px;
   color: black;
   font-style: italic;
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 16px;
   align-self: center;
 
   //background-color: #fff9c4;
@@ -92,15 +93,28 @@ h1 {
 .hc-item {
   padding: 3px;
   font-size: 11px; /* Adjust the font size as needed */
-  color: black;
+  color: rgb(20, 19, 19);
   font-weight: 600;
   background-color: #1e88e5;
   border-radius: 1px;
   transition: filter 0.3s ease;
   &:hover {
-    filter: brightness(0.9); // Increase brightness on hover
+    filter: brightness(1.2);
   }
 }
+
+.hc-item-menu {
+  @extend .hc-item;
+  color: rgb(36, 34, 34);
+  font-size: 13px;
+  font-weight: 700;
+  text-shadow: 5px #000000;
+  background-color: #69aed6;
+  &:hover {
+    filter: brightness(0.7);
+  }
+}
+
 .success {
   color: green;
 }
@@ -125,4 +139,28 @@ h1 {
   background-color: #fff9c4;
   font: 10px;
   color: black;
+}
+
+.footer {
+  display: flex;
+  font-size: 10px;
+  font-weight: 600;
+  width: 100%;
+  color: black;
+  background-color: #c9c7c0;
+  padding: 3px;
+}
+
+.footer__left {
+  display: flex;
+  column-gap: 10px;
+  width: 500px;
+}
+.footer__right {
+  text-align: right;
+  column-gap: 10px;
+  width: 100%;
+}
+.hc-quick {
+  font-size: 9px;
 }

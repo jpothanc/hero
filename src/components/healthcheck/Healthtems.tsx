@@ -40,9 +40,9 @@ const HealthItems = ({ healthCheck }: Props) => {
               >
                 <div>
                   {item.group === "database" ? (
-                    <FaDatabase></FaDatabase>
+                    <FaDatabase size="18px"></FaDatabase>
                   ) : (
-                    <GiSpiderWeb></GiSpiderWeb>
+                    <GiSpiderWeb size="18px"></GiSpiderWeb>
                   )}
                 </div>
                 <OverlayTrigger
@@ -52,12 +52,12 @@ const HealthItems = ({ healthCheck }: Props) => {
                   rootClose={true} // Close the overlay when clicking outside
                 >
                   <div onClick={() => setName(item)}>
-                    <FaCircleInfo></FaCircleInfo>
+                    <FaCircleInfo size="18px"></FaCircleInfo>
                   </div>
                 </OverlayTrigger>
 
                 <a href={item?.wiki} target="_">
-                  <FaLink></FaLink>
+                  <FaLink size="18px"></FaLink>
                 </a>
               </div>
             </div>

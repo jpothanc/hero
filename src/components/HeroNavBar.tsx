@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 import Avatar from "react-avatar";
 
 const HeroNavBar = () => {
@@ -19,13 +19,13 @@ const HeroNavBar = () => {
           <Nav className="me-auto">
             <Nav.Link href="/">health</Nav.Link>
 
-            <Nav.Link href="/health">health</Nav.Link>
+            {/* <Nav.Link href="/health">health</Nav.Link>
 
             <NavDropdown title="notes" id="basic-nav-dropdown">
               <NavDropdown.Item href="/p-notes">personal</NavDropdown.Item>
               <NavDropdown.Item href="/t-notes">team</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/about">about</Nav.Link>
+            <Nav.Link href="/about">about</Nav.Link> */}
           </Nav>
           <div className="d-flex">
             <div

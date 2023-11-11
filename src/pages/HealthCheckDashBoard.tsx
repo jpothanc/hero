@@ -7,7 +7,6 @@ import useWebSockets from "../hooks/useHeathCheckSockets";
 import { FaHeartCirclePlus } from "react-icons/fa6";
 
 const HealthCheckDashBoard = () => {
-  
   const [healthCheck, setHealthCheck] = useState<HealthCheck | null>(null);
   useWebSockets({ setHealthCheck });
 
@@ -28,7 +27,7 @@ const HealthCheckDashBoard = () => {
     <>
       <div className="hc-container">
         <div className="hc-container__top_left_bar">
-          <FaHeartCirclePlus size="20"></FaHeartCirclePlus>
+          <FaHeartCirclePlus size="24px"></FaHeartCirclePlus>
           &nbsp;&nbsp;health check dashboard
         </div>
         <HealthMenuBar healthCheck={healthCheck} />

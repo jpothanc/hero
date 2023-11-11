@@ -10,9 +10,9 @@ const HealthMenuBar = ({ healthCheck }: Props) => {
     <>
       <div className="hc-container__top_right_bar">
         <div
-          className="hc-item "
+          className="hc-item-menu"
           style={{
-            backgroundColor: "#81C784",
+            backgroundColor: "#66BB6A",
           }}
         >
           healthy&nbsp;
@@ -21,19 +21,19 @@ const HealthMenuBar = ({ healthCheck }: Props) => {
           </Badge>
         </div>
 
-        <div className="hc-item" style={{ backgroundColor: "#EF5350" }}>
+        <div className="hc-item-menu" style={{ backgroundColor: "#EF5350" }}>
           unhealthy&nbsp;
           <Badge pill bg="light">
             {healthCheck?.unhealthyItems}
           </Badge>
         </div>
-        <div className="hc-item">
+        <div className="hc-item-menu">
           updated&nbsp;
           <Badge pill bg="light">
             {healthCheck?.timeStamp}
           </Badge>
         </div>
-        <div className="hc-item">
+        <div className="hc-item-menu">
           duration&nbsp;
           <Badge pill bg="light">
             {healthCheck?.elapsed}
