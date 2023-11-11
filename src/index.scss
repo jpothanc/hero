@@ -64,7 +64,7 @@ h1 {
   display: flex;
   column-gap: 1cap;
   font-weight: 600;
-  background-color: #a88008;
+  background-color: #c9c7c0;
 }
 .hc-container__top_right_bar {
   display: flex;
@@ -110,6 +110,7 @@ h1 {
   font-weight: 700;
   text-shadow: 5px #000000;
   background-color: #69aed6;
+  border-radius: 5%;
   &:hover {
     filter: brightness(0.7);
   }
