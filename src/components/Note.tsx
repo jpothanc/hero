@@ -17,7 +17,7 @@ const Note = ({ text }: Props) => {
     return () => {};
   }, []);
 
-  const [value, setValue] = useState<any>([
+  const [value] = useState<any>([
     {
       type: "paragraph",
       children: [{ text: text }],
@@ -27,9 +27,11 @@ const Note = ({ text }: Props) => {
     x: 0,
     y: 100,
   });
-  function handleDrag(e: DraggableEvent, data: DraggableData): false | void {}
+  function handleDrag(e: DraggableEvent, data: DraggableData): false | void {
+    console.log("handleDrag" + data.x + " " + data.y + e.timeStamp);
+  }
   function handleStop(e: DraggableEvent, data: DraggableData): false | void {
-    console.log("handleStop");
+    console.log("handleStop" + e.timeStamp);
     console.log("handleDrag");
     setDraggableDivPosition({
       x: data.lastX,
@@ -41,7 +43,7 @@ const Note = ({ text }: Props) => {
     // setDraggable(false);
   }
   function handleStart(e: DraggableEvent, data: DraggableData): false | void {
-    console.log("handleStart");
+    console.log("handleStart" + data.x + " " + data.y);
 
     const element = e.target as HTMLInputElement;
     const elementId = element?.id;
