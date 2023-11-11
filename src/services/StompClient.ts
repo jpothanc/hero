@@ -1,21 +1,30 @@
 import { Client, IFrame, Message } from "@stomp/stompjs";
+import { injectable } from "inversify";
 
-class StompClient {
+export interface IStompClient {
+  connect(url: string, callback: (frame: IFrame) => void): Promise<void>;
+  subscribe(destination: string, callback: (message: Message) => void): any;
+  sendMessage(destination: string, body: string): void;
+  disconnect(): void;
+}
+
+@injectable()
+export class StompClient implements IStompClient {
   private client?: Client;
 
-  constructor(private url: string) {}
-
-  public async connect(callback: (frame: IFrame) => void):Promise<void> {
+  public async connect(
+    url: string,
+    callback: (frame: IFrame) => void
+  ): Promise<void> {
     console.log("StompClient connecting");
     this.client = new Client({
-      brokerURL: this.url,
+      brokerURL: url,
       debug: (str) => {
         console.log("error:" + str);
       },
       onConnect: (frame) => {
         console.log(" StompClient Connected: " + frame);
         callback(frame);
-        // ...
       },
     });
     this.client.activate();
@@ -38,5 +47,3 @@ class StompClient {
     this.client?.deactivate();
   }
 }
-
-export default StompClient;

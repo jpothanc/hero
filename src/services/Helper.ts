@@ -1,4 +1,10 @@
+import { IconType } from "react-icons";
 import { HealthCheck } from "./Types";
+import React from "react";
+
+import { FaDatabase } from "react-icons/fa6";
+import { GiSpiderWeb } from "react-icons/gi";
+;
 
 export async function fetchHealthCheckInfo(): Promise<HealthCheck> {
   const response = await fetch(
@@ -26,6 +32,32 @@ export function getColor1(status: string): string {
       break;
   }
   return color;
+}
+export function getIcon(icon: IconType): any | undefined {
+  return React.createElement(icon, {
+    style: {
+      width: "28px",
+      height: "28px",
+    },
+  });
+
+  return undefined;
+}
+
+export function getIconByName(name: string): any | undefined {
+  switch (name) {
+    case "database":
+      return getIcon(FaDatabase);
+      break;
+    case "web":
+      return getIcon(GiSpiderWeb);
+      break;
+
+    default:
+      break;
+  }
+
+  return FaDatabase;
 }
 
 export function getColor(status: boolean): string {

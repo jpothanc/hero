@@ -3,17 +3,24 @@ import Accordion from "react-bootstrap/Accordion";
 import { FaRegCircleCheck, FaLink, FaCircleInfo } from "react-icons/fa6";
 import { fetchHealthCheckInfo, getColor } from "../services/Helper";
 import { useEffect, useRef, useState } from "react";
-import { HealthCheck } from "../services/Types";
-import StompClient from "../services/StompClient";
+import { HealthCheck, HealthCheckInfo } from "../services/Types";
+
 import PopUp, { ModalRef } from "../components/PopUp";
+import useWebSockets from "../hooks/useHeathCheckSockets";
+import { OverlayTrigger, Popover } from "react-bootstrap";
+import HealthInfo from "../components/healthcheck/HealthInfoDetails";
 
 const HealthCheckBoard = () => {
   const [healthCheck, setHealthCheck] = useState<HealthCheck | null>(null);
 
+  const [name, setName] = useState<HealthCheckInfo | null>(null);
   const modalRef = useRef<ModalRef | null>(null);
-  const handleOpenModal = () => {
-    modalRef.current?.open();
-  };
+
+  // const handleOpenModal = (name: string) => {
+  //   modalRef?.current?.setDetails(name, name);
+  //   modalRef?.current?.open();
+  // };
+  useWebSockets({ setHealthCheck });
 
   useEffect(() => {
     const loadHealthCheckInfo = async () => {
@@ -28,29 +35,21 @@ const HealthCheckBoard = () => {
     return () => {};
   }, []);
 
-  useEffect(() => {
-    var client = new StompClient("ws://LAPTOP-UMF83CB2:8080/ws-endpoint1");
+  const popover = (
+    <Popover id="popover-basic">
+      <HealthInfo HealthCheckInfo={name}></HealthInfo>
+    </Popover>
+  );
 
-    client.connect((frame) => {
-      frame.body;
-      console.log(`firstConnect : ${frame.body}`);
-      client?.subscribe("/topic/healthCheck", (message) => {
-        console.log(`Received message: ${message.body}`);
-        const data = JSON.parse(message.body) as HealthCheck;
-        setHealthCheck(data);
-      });
-    });
-
-    return () => {
-      console.log("disconnect");
-      client.disconnect();
-    };
-  }, []);
   return (
     <>
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
-          <Accordion.Header>
+          <Accordion.Header
+            style={{
+              backgroundColor: "red",
+            }}
+          >
             <div className="success">
               <FaRegCircleCheck></FaRegCircleCheck>
             </div>
@@ -86,15 +85,19 @@ const HealthCheckBoard = () => {
                       display: "flex",
                       columnGap: "5px",
                     }}
+                    key={item.name}
                   >
-                    <div onClick={handleOpenModal}>
-                      <FaCircleInfo></FaCircleInfo>
-                    </div>
-                    <PopUp
-                      title="Alert"
-                      content={item.description}
-                      ref={modalRef}
-                    />
+                    <OverlayTrigger
+                      trigger="click"
+                      placement="right"
+                      overlay={popover}
+                      rootClose={true} // Close the overlay when clicking outside
+                    >
+                      <div onClick={() => setName(item)}>
+                        <FaCircleInfo></FaCircleInfo>
+                      </div>
+                    </OverlayTrigger>
+
                     <a href={item?.wiki} target="_">
                       <FaLink></FaLink>
                     </a>
@@ -109,6 +112,7 @@ const HealthCheckBoard = () => {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
+      <PopUp title1="Alert" ref={modalRef} />
     </>
   );
 };

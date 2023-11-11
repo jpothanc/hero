@@ -12,17 +12,17 @@ const HeroNavBar = () => {
       data-bs-theme="dark"
     >
       <Container fluid>
-        <Navbar.Brand href="#home">Hero</Navbar.Brand>
+        <Navbar.Brand href="#home">hero</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/health">Health</Nav.Link>
-            <NavDropdown title="Notes" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/p-notes">Personal</NavDropdown.Item>
-              <NavDropdown.Item href="/t-notes">Team</NavDropdown.Item>
+            <Nav.Link href="/">home</Nav.Link>
+            <Nav.Link href="/health">health</Nav.Link>
+            <NavDropdown title="notes" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/p-notes">personal</NavDropdown.Item>
+              <NavDropdown.Item href="/t-notes">team</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/about">about</Nav.Link>
           </Nav>
           <div className="d-flex">
             <div

@@ -1,3 +1,11 @@
 {
-    
+  "app": {
+    "name": "Node.js Starter App",
+    "version": "0.0.1",
+    "healthcheck": {
+      "healthcheckWsEndpoint": "ws://LAPTOP-UMF83CB2:8080/ws-endpoint1",
+      "healthcheckWsTopic": "/topic/healthCheck",
+      "healthcheckRestEndpoint": "https://healthcheck-ib.azurewebsites.net/api/v1/health/check"
+    }
+  }
 }
