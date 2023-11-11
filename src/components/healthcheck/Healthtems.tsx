@@ -30,7 +30,7 @@ const HealthItems = ({ healthCheck }: Props) => {
         >
           <Card.Header>
             <div className="card-header-font">
-              {item.name.toUpperCase()}
+              {item.name.toLowerCase()}
               <div
                 style={{
                   display: "flex",
