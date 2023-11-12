@@ -13,7 +13,9 @@ const HeroNavBar = () => {
       data-bs-theme="dark"
     >
       <Container fluid>
-        <Navbar.Brand href="#home">hero</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <div className="logo">hero</div>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

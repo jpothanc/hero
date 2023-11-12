@@ -4,12 +4,10 @@ import React from "react";
 
 import { FaDatabase } from "react-icons/fa6";
 import { GiSpiderWeb } from "react-icons/gi";
-;
+import config from "../config.json";
 
 export async function fetchHealthCheckInfo(): Promise<HealthCheck> {
-  const response = await fetch(
-    "https://healthcheck-ib.azurewebsites.net/api/v1/health/check"
-  );
+  const response = await fetch(config.app.healthcheck.healthcheckRestEndpoint);
   if (!response.ok) throw new Error("Error fetching HealthCheck Information.");
 
   return (await response.json()) as HealthCheck;

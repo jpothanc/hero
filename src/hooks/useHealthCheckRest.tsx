@@ -16,6 +16,7 @@ const useHealthCheckRest = ({ setHealthCheck }: Props) => {
       try {
         const data = await fetchHealthCheckInfo();
         setHealthCheck(data);
+        console.log(data.unhealthyItems);
         console.log("loadHealthCheckInfo");
       } catch (error) {
         console.log(error);
@@ -23,7 +24,7 @@ const useHealthCheckRest = ({ setHealthCheck }: Props) => {
     };
 
     loadHealthCheckInfo();
-    
+
     if (config.app.healthcheck.queryIntervalRest > 0) {
       intervalId = setInterval(loadHealthCheckInfo, interval); // Refresh every x seconds
     }

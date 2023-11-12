@@ -39,10 +39,10 @@ h1 {
   font-weight: 600;
   background-color: #fff9c4;
 }
-@media (max-width: 825px) {
-  .accordian-header-container {
-    flex-direction: column;
-  }
+@media (max-width: 925px) {
+  // .accordian-header-container {
+  //   flex-direction: column;
+  // }
   // .hc-container {
   //   flex-direction: column;
   // }
@@ -52,6 +52,7 @@ h1 {
   // }
   .hc-container__body {
     flex-direction: column;
+    border: #1e88e5 1px solid;
   }
 }
 .hc-info-container {
@@ -69,7 +70,7 @@ h1 {
 .hc-container__top_right_bar {
   display: flex;
   margin: 0px 0px 0px auto;
-  column-gap: 2px;
+  column-gap: 1px;
   padding-right: 1px;
   //background-color: green;
 }
@@ -77,21 +78,22 @@ h1 {
 .hc-container__top_left_bar {
   padding-left: 10px;
   color: black;
-  font-style: italic;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   align-self: center;
 
   //background-color: #fff9c4;
 }
 .hc-container__body {
   display: flex;
-  flex-direction: row;
+  column-gap: 1px;
+  font-weight: 600;
   padding: 10px;
-  //background-color: #fff9c4;
+  margin: 0px auto;
 }
+
 .hc-item {
-  padding: 3px;
+  padding: 2px;
   font-size: 11px; /* Adjust the font size as needed */
   color: rgb(20, 19, 19);
   font-weight: 600;
@@ -105,12 +107,12 @@ h1 {
 
 .hc-item-menu {
   @extend .hc-item;
-  color: rgb(36, 34, 34);
-  font-size: 13px;
-  font-weight: 700;
-  text-shadow: 5px #000000;
-  background-color: #69aed6;
-  border-radius: 5%;
+  color: rgb(255, 253, 253);
+  font-size: 11px;
+  font-weight: 600;
+  border: #424242 1px solid;
+  background-color: #6c757d;
+  transition: filter 0.3s ease;
   &:hover {
     filter: brightness(0.7);
   }
@@ -164,4 +166,11 @@ h1 {
 }
 .hc-quick {
   font-size: 9px;
+}
+
+.logo {
+  background-color: #00bfa5;
+  height: 50px;
+  width: 50px;
+  padding: 5px;
 }

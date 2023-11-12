@@ -25,7 +25,7 @@ const HealthItems = ({ healthCheck }: Props) => {
           bg={getColor(item.healthy)}
           key={item.name}
           text="white"
-          style={{ width: "12rem", fontSize: "10px" }}
+          style={{ fontSize: "10px" }}
           className="mb-1"
         >
           <Card.Header>
@@ -40,9 +40,9 @@ const HealthItems = ({ healthCheck }: Props) => {
               >
                 <div>
                   {item.group === "database" ? (
-                    <FaDatabase size="18px"></FaDatabase>
+                    <FaDatabase size="14px"></FaDatabase>
                   ) : (
-                    <GiSpiderWeb size="18px"></GiSpiderWeb>
+                    <GiSpiderWeb size="14px"></GiSpiderWeb>
                   )}
                 </div>
                 <OverlayTrigger
@@ -52,12 +52,12 @@ const HealthItems = ({ healthCheck }: Props) => {
                   rootClose={true} // Close the overlay when clicking outside
                 >
                   <div onClick={() => setName(item)}>
-                    <FaCircleInfo size="18px"></FaCircleInfo>
+                    <FaCircleInfo size="14px"></FaCircleInfo>
                   </div>
                 </OverlayTrigger>
 
                 <a href={item?.wiki} target="_">
-                  <FaLink size="18px"></FaLink>
+                  <FaLink size="14px"></FaLink>
                 </a>
               </div>
             </div>
