@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "healthcheck": {
       "connectWs": false,
-      "queryIntervalRest": 10,
+      "queryIntervalRest": 60,
       "healthcheckWsEndpoint": "ws://LAPTOP-UMF83CB2:8080/ws-endpoint1",
       "healthcheckWsEndpoint1": "ws://healthcheck-ib.azurewebsites.net:80/ws-endpoint1",
       "healthcheckWsTopic": "/topic/healthCheck",
