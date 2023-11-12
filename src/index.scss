@@ -1,4 +1,5 @@
 $primary-color: #051c29;
+$logo-color: #00bfa5;
 
 .body {
   background-color: rgba(20, 20, 20, 1);
@@ -169,8 +170,22 @@ h1 {
 }
 
 .logo {
-  background-color: #00bfa5;
+  background-color: $logo-color;
   height: 50px;
   width: 50px;
   padding: 5px;
+}
+.logo-card-icon-color {
+  color: $logo-color;
+  transition: all 0.3s ease;
+  &:hover {
+    scale: 1.2;
+  }
+}
+.logo-card-icon-color_link {
+  color: #0277bd;
+  transition: all 0.3s ease;
+  &:hover {
+    scale: 1.2;
+  }
 }

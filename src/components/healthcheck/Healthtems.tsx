@@ -38,7 +38,7 @@ const HealthItems = ({ healthCheck }: Props) => {
                 }}
                 key={item.name}
               >
-                <div>
+                <div className="logo-card-icon-color">
                   {item.group === "database" ? (
                     <FaDatabase size="14px"></FaDatabase>
                   ) : (
@@ -51,12 +51,21 @@ const HealthItems = ({ healthCheck }: Props) => {
                   overlay={popover}
                   rootClose={true} // Close the overlay when clicking outside
                 >
-                  <div onClick={() => setName(item)}>
+                  <div
+                    className="logo-card-icon-color"
+                    onClick={() => setName(item)}
+                    style={{
+                      cursor: "pointer",
+                    }}
+                  >
                     <FaCircleInfo size="14px"></FaCircleInfo>
                   </div>
                 </OverlayTrigger>
-
-                <a href={item?.wiki} target="_">
+                <a
+                  href={item?.wiki}
+                  target="_"
+                  className="logo-card-icon-color_link"
+                >
                   <FaLink size="14px"></FaLink>
                 </a>
               </div>
