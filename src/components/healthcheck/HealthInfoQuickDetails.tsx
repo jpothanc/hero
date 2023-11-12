@@ -13,7 +13,7 @@ const HealthInfoQuickDetails = ({ HealthCheckInfo, color, error }: Props) => {
         <div className="hc-item" style={{ backgroundColor: color }}>
           {HealthCheckInfo?.timestamp}&nbsp;
           <Badge pill bg="light">
-            <span className="hc-quick">updated</span>
+            <span className="hc-quick">last</span>
           </Badge>
         </div>
         <div className="hc-item" style={{ backgroundColor: color }}>

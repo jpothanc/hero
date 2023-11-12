@@ -1,27 +1,17 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import HealthMenuBar from "../components/healthcheck/HealthMenuBar";
 import HealthItems from "../components/healthcheck/Healthtems";
-import { fetchHealthCheckInfo } from "../services/Helper";
 import { HealthCheck } from "../services/Types";
 import useWebSockets from "../hooks/useHeathCheckSockets";
 import { FaHeartCirclePlus } from "react-icons/fa6";
 
+import useHealthCheckRest from "../hooks/useHealthCheckRest";
+
 const HealthCheckDashBoard = () => {
   const [healthCheck, setHealthCheck] = useState<HealthCheck | null>(null);
-  useWebSockets({ setHealthCheck });
 
-  useEffect(() => {
-    const loadHealthCheckInfo = async () => {
-      try {
-        const data = await fetchHealthCheckInfo();
-        setHealthCheck(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    loadHealthCheckInfo();
-    return () => {};
-  }, []);
+  useHealthCheckRest({ setHealthCheck });
+  useWebSockets({ setHealthCheck });
 
   return (
     <>

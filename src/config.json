@@ -3,7 +3,10 @@
     "name": "Node.js Starter App",
     "version": "0.0.1",
     "healthcheck": {
+      "connectWs": false,
+      "queryIntervalRest": 5,
       "healthcheckWsEndpoint": "ws://LAPTOP-UMF83CB2:8080/ws-endpoint1",
+      "healthcheckWsEndpoint1": "ws://healthcheck-ib.azurewebsites.net:80/ws-endpoint1",
       "healthcheckWsTopic": "/topic/healthCheck",
       "healthcheckRestEndpoint": "https://healthcheck-ib.azurewebsites.net/api/v1/health/check"
     }

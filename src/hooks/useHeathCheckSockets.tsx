@@ -12,6 +12,8 @@ const useWebSockets = ({ setHealthCheck }: Props) => {
   const stompClient = diContainer.get<IStompClient>("StompClient");
 
   useEffect(() => {
+    if (!config.app.healthcheck?.connectWs) return;
+
     stompClient.connect(
       config.app.healthcheck.healthcheckWsEndpoint,
       (frame) => {

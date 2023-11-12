@@ -28,7 +28,7 @@ const HealthMenuBar = ({ healthCheck }: Props) => {
           </Badge>
         </div>
         <div className="hc-item-menu">
-          updated&nbsp;
+          last&nbsp;
           <Badge pill bg="light">
             {healthCheck?.timeStamp}
           </Badge>
