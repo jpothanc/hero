@@ -12,26 +12,26 @@ const HealthMenuBar = ({ healthCheck }: Props) => {
         <div className="hc-item-menu">
           healthy&nbsp;
           <Badge pill bg="success">
-            {healthCheck?.healthyItems}
+            <span className="hc-pill_menu ">{healthCheck?.healthyItems}</span>
           </Badge>
         </div>
 
         <div className="hc-item-menu">
           unhealthy&nbsp;
           <Badge pill bg="danger">
-            {healthCheck?.unhealthyItems}
+            <span className="hc-pill_menu ">{healthCheck?.unhealthyItems}</span>
           </Badge>
         </div>
         <div className="hc-item-menu">
           last&nbsp;
           <Badge pill bg="light">
-            {healthCheck?.timeStamp}
+            <span className="hc-pill_menu ">{healthCheck?.timeStamp}</span>
           </Badge>
         </div>
         <div className="hc-item-menu">
           duration&nbsp;
           <Badge pill bg="light">
-            {healthCheck?.elapsed}
+            <span className="hc-pill_menu ">{healthCheck?.elapsed}</span>
           </Badge>
         </div>
       </div>

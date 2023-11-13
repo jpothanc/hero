@@ -16,54 +16,54 @@ const HealthInfoDetails = ({ HealthCheckInfo }: Props) => {
         <div className="hc-item" style={{ backgroundColor: "#ECEFF1" }}>
           {HealthCheckInfo?.healthy ? "true" : "false"}&nbsp;
           <Badge pill bg="success">
-            healthy
+            <span className="hc-pill">healthy</span>
           </Badge>
         </div>
 
         <div className="hc-item" style={{ backgroundColor: "#CFD8DC" }}>
           {HealthCheckInfo?.name}&nbsp;
           <Badge pill bg="success">
-            name
+            <span className="hc-pill">name</span>
           </Badge>
         </div>
 
         <div className="hc-item" style={{ backgroundColor: "#ECEFF1" }}>
           {HealthCheckInfo?.description}&nbsp;
           <Badge pill bg="success">
-            description
+            <span className="hc-pill">description</span>
           </Badge>
         </div>
 
         <div className="hc-item" style={{ backgroundColor: "#CFD8DC" }}>
           {HealthCheckInfo?.group}&nbsp;
           <Badge pill bg="success">
-            group
+            <span className="hc-pill">group</span>
           </Badge>
         </div>
 
         <div className="hc-item" style={{ backgroundColor: "#ECEFF1" }}>
           {HealthCheckInfo?.wiki}&nbsp;
           <Badge pill bg="success">
-            wiki
+            <span className="hc-pill">wiki</span>
           </Badge>
         </div>
 
         <div className="hc-item" style={{ backgroundColor: "#CFD8DC" }}>
           {HealthCheckInfo?.timestamp}&nbsp;
           <Badge pill bg="success">
-            updated
+            <span className="hc-pill">updated</span>
           </Badge>
         </div>
         <div className="hc-item" style={{ backgroundColor: "#ECEFF1" }}>
           {HealthCheckInfo?.elapsed}&nbsp;
           <Badge pill bg="success">
-            duration
+            <span className="hc-pill">duration</span>
           </Badge>
         </div>
         <div className="hc-item" style={{ backgroundColor: "#CFD8DC" }}>
           {HealthCheckInfo?.healthQuery}&nbsp;
           <Badge pill bg="success">
-            healthQuery
+            <span className="hc-pill">healthQuery</span>
           </Badge>
         </div>
       </div>

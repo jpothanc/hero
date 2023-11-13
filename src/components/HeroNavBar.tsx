@@ -14,7 +14,9 @@ const HeroNavBar = () => {
     >
       <Container fluid>
         <Navbar.Brand href="#home">
-          <div className="logo">hero</div>
+          <div className="logo">
+            <span className="logo_text">hero</span>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
