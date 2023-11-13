@@ -21,7 +21,7 @@ const DashBoard = () => {
             <Card.Header>
               <div className="dash-container">
                 <div className="dash-icon">
-                  <FaHeartCirclePlus size="24px"></FaHeartCirclePlus>
+                  <FaHeartCirclePlus size="20px"></FaHeartCirclePlus>
                 </div>
                 <div className="dash-text">health checks</div>
               </div>
