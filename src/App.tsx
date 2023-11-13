@@ -7,14 +7,14 @@ import { Navbar } from "react-bootstrap";
 import config from "./config.json";
 
 import HealthCheckDashBoard from "./pages/HealthCheckDashBoard";
+import DashBoard from "./pages/DashBoard";
 const App = () => {
   return (
     <>
-      <HeroNavBar />
-
       <Router>
+        <HeroNavBar />
         <Routes>
-          <Route path="/" element={<HealthCheckDashBoard />}></Route>
+          <Route path="/" element={<DashBoard />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/health" element={<HealthCheckDashBoard />}></Route>
           <Route path="/p-notes" element={<PersonalNotes />}></Route>

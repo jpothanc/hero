@@ -13,6 +13,14 @@ type Props = {
 const HealthItems = ({ healthCheck }: Props) => {
   const [name, setName] = useState<HealthCheckInfo | null>(null);
 
+  function getGroupIcon(group: string): any {
+    return group === "database" ? (
+      <FaDatabase size="14px"></FaDatabase>
+    ) : (
+      <GiSpiderWeb size="14px"></GiSpiderWeb>
+    );
+  }
+
   const popover = (
     <Popover id="popover-basic">
       <HealthInfoDetails HealthCheckInfo={name}></HealthInfoDetails>
@@ -38,13 +46,7 @@ const HealthItems = ({ healthCheck }: Props) => {
                 }}
                 key={item.name}
               >
-                <div className="logo-card-icon-color">
-                  {item.group === "database" ? (
-                    <FaDatabase size="14px"></FaDatabase>
-                  ) : (
-                    <GiSpiderWeb size="14px"></GiSpiderWeb>
-                  )}
-                </div>
+                <div className="card-icon">{getGroupIcon(item.group)}</div>
                 <OverlayTrigger
                   trigger="click"
                   placement="right"
@@ -52,7 +54,7 @@ const HealthItems = ({ healthCheck }: Props) => {
                   rootClose={true} // Close the overlay when clicking outside
                 >
                   <div
-                    className="logo-card-icon-color"
+                    className="card-icon"
                     onClick={() => setName(item)}
                     style={{
                       cursor: "pointer",
@@ -61,11 +63,8 @@ const HealthItems = ({ healthCheck }: Props) => {
                     <FaCircleInfo size="14px"></FaCircleInfo>
                   </div>
                 </OverlayTrigger>
-                <a
-                  href={item?.wiki}
-                  target="_"
-                  className="logo-card-icon-color_link"
-                >
+
+                <a href={item?.wiki} target="_blank" className="card-icon_link">
                   <FaLink size="14px"></FaLink>
                 </a>
               </div>

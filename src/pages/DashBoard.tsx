@@ -1,25 +1,42 @@
-import { Card } from "react-bootstrap";
-
+import { Button, Card } from "react-bootstrap";
+import { FaHeartCirclePlus } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 const DashBoard = () => {
   const variant = "Primary";
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    navigate("/health");
+  };
   return (
     <>
-      <Card
-        bg={variant.toLowerCase()}
-        key={variant}
-        text={variant.toLowerCase() === "light" ? "dark" : "white"}
-        style={{ width: "18rem" }}
-        className="mb-2"
-      >
-        <Card.Header>Header</Card.Header>
-        <Card.Body>
-          <Card.Title>{variant} Card Title </Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
+      <div className="dash-container">
+        <div className="hc-container__body">
+          <Card
+            bg={variant.toLowerCase()}
+            key={variant}
+            text={variant.toLowerCase() === "light" ? "dark" : "white"}
+            style={{ width: "18rem" }}
+            className="mb-2"
+          >
+            <Card.Header>
+              <div className="dash-container">
+                <div className="dash-icon">
+                  <FaHeartCirclePlus size="24px"></FaHeartCirclePlus>
+                </div>
+                <div className="dash-text">health checks</div>
+              </div>
+            </Card.Header>
+            <Card.Body>
+              <Card.Text>
+                health checks for your production environment.
+              </Card.Text>
+              <Button onClick={handleButtonClick} variant="outline-success" size="sm">
+                go...
+              </Button>{" "}
+            </Card.Body>
+          </Card>
+        </div>
+      </div>
     </>
   );
 };

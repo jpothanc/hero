@@ -66,7 +66,11 @@ h1 {
   display: flex;
   column-gap: 1cap;
   font-weight: 600;
-  background-color: #c9c7c0;
+  background-color: #b3b1ae;
+}
+.dash-container {
+  display: flex;
+  column-gap: 1cap;
 }
 .hc-container__top_right_bar {
   display: flex;
@@ -77,11 +81,13 @@ h1 {
 }
 
 .hc-container__top_left_bar {
-  padding-left: 10px;
+  display: flex;
+   column-gap: 10px;
   color: black;
   font-weight: 700;
   font-size: 18px;
   align-self: center;
+  background-color: #c9c7c0;
 
   //background-color: #fff9c4;
 }
@@ -115,7 +121,6 @@ h1 {
   font-size: 11px;
   color: black;
 }
-
 
 .hc-item-menu {
   @extend .hc-item;
@@ -196,7 +201,7 @@ h1 {
   width: 50px;
   padding: 5px;
 }
-.logo-card-icon-color {
+.card-icon {
   padding-left: 5px;
   color: #64ffda;
   transition: all 0.3s ease;
@@ -204,7 +209,23 @@ h1 {
     scale: 1.4;
   }
 }
-.logo-card-icon-color_link {
-  @extend .logo-card-icon-color;
-  color: #40c4ff;
+.card-icon_link {
+  @extend .card-icon;
+  color: #0e91e9;
+  font-weight: 700;
+}
+
+.dash-container{
+  display: flex;
+   column-gap: px;
+}
+.dash-icon {
+  @extend .card-icon;
+  color: #ed6c6c;
+  align-items: center;
+}
+
+.dash-text {
+  font-size: 18px;
+  align-items: center;
 }

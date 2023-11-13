@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import HeroNavBar from "../components/HeroNavBar";
 import PopUp, { ModalRef } from "../components/PopUp";
 
 const About = () => {
@@ -14,7 +13,6 @@ const About = () => {
   };
   return (
     <>
-      <HeroNavBar />
       <button onClick={handleOpenModal} className="btn btn-primary">
         My Button
       </button>

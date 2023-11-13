@@ -17,8 +17,10 @@ const HealthCheckDashBoard = () => {
     <>
       <div className="hc-container">
         <div className="hc-container__top_left_bar">
-          <FaHeartCirclePlus size="20px"></FaHeartCirclePlus>
-          &nbsp;&nbsp;health checks
+          <div className="dash-icon">
+            <FaHeartCirclePlus size="20px"></FaHeartCirclePlus>
+          </div>
+          <div className="dash-text">health checks</div>
         </div>
         <HealthMenuBar healthCheck={healthCheck} />
       </div>

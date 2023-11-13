@@ -42,7 +42,14 @@ const HealthInfoDetails = ({ HealthCheckInfo }: Props) => {
         </div>
 
         <div className="hc-item" style={{ backgroundColor: "#ECEFF1" }}>
-          {HealthCheckInfo?.wiki}&nbsp;
+          <a
+            href={HealthCheckInfo?.wiki}
+            target="_blank"
+            className="card-icon_link"
+          >
+            {HealthCheckInfo?.wiki}
+          </a>
+          &nbsp;
           <Badge pill bg="success">
             <span className="hc-pill">wiki</span>
           </Badge>
