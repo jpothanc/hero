@@ -25,7 +25,9 @@ const HeroNavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <LinkContainer to="/health">
-              <Nav.Link>health</Nav.Link>
+              <Nav.Item>
+                <Nav.Link>health</Nav.Link>
+              </Nav.Item>
             </LinkContainer>
 
             {/* <Nav.Link href="/health">health</Nav.Link>
