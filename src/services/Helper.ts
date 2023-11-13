@@ -1,10 +1,10 @@
 import { IconType } from "react-icons";
 import { HealthCheck } from "./Types";
 import React from "react";
-
-import { FaDatabase } from "react-icons/fa6";
+import { FaCircleInfo, FaDatabase, FaHeartCirclePlus } from "react-icons/fa6";
 import { GiSpiderWeb } from "react-icons/gi";
 import config from "../config.json";
+import { MdDynamicFeed } from "react-icons/md";
 
 export async function fetchHealthCheckInfo(): Promise<HealthCheck> {
   const response = await fetch(config.app.healthcheck.healthcheckRestEndpoint);
@@ -13,42 +13,36 @@ export async function fetchHealthCheckInfo(): Promise<HealthCheck> {
   return (await response.json()) as HealthCheck;
 }
 
-export function getColor1(status: string): string {
-  let color = "Light";
-  switch (status) {
-    case "healthy":
-      color = "Primary";
-      break;
-    case "unhealthy":
-      color = "danger";
-      break;
-    case "unknown":
-      color = "warning";
-      break;
-
-    default:
-      break;
-  }
-  return color;
-}
-export function getIcon(icon: IconType): any | undefined {
+export function getIcon(icon: IconType, size: string): any | undefined {
   return React.createElement(icon, {
     style: {
-      width: "28px",
-      height: "28px",
+      width: size,
+      height: size,
     },
   });
 
   return undefined;
 }
 
-export function getIconByName(name: string): any | undefined {
+export function getIconByName(
+  name: string | undefined,
+  size: string
+): any | undefined {
   switch (name) {
     case "database":
-      return getIcon(FaDatabase);
+      return getIcon(FaDatabase, size);
       break;
     case "web":
-      return getIcon(GiSpiderWeb);
+      return getIcon(GiSpiderWeb, size);
+      break;
+    case "MdDynamicFeed":
+      return getIcon(MdDynamicFeed, size);
+      break;
+    case "FaHeartCirclePlus":
+      return getIcon(FaHeartCirclePlus, size);
+      break;
+    case "FaCircleInfo":
+      return getIcon(FaCircleInfo, size);
       break;
 
     default:
@@ -67,9 +61,19 @@ export function getColor(status: boolean): string {
     case false:
       color = "danger";
       break;
-
     default:
       break;
   }
   return color;
+}
+
+export function openExternalLink(url: string): void {
+  const newWindow = window.open(url, "_blank");
+  if (newWindow) {
+    newWindow.focus();
+  } else {
+    console.error(
+      "Unable to open external link. Please check your browser settings."
+    );
+  }
 }

@@ -67,6 +67,7 @@ h1 {
   column-gap: 1cap;
   font-weight: 600;
   background-color: #b3b1ae;
+  padding-right: 2px;
 }
 .dash-container {
   display: flex;
@@ -215,9 +216,9 @@ h1 {
   font-weight: 700;
 }
 
-.dash-container {
+.dash-header {
   display: flex;
-  column-gap: px;
+  column-gap: 10px;
 }
 .dash-icon {
   @extend .card-icon;
@@ -232,4 +233,20 @@ h1 {
 .dash-text {
   font-size: 18px;
   align-items: center;
+}
+
+.dash-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-content {
+  font-size: 12px;
+  align-items: center;
+}
+
+.dash-nav {
+  padding: 5px;
+  font-size: 12px;
+  margin: 0px 0px 0px auto;
 }

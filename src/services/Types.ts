@@ -29,3 +29,11 @@ export type HealthCheckInfo = {
   timestamp: string;
   healthy: boolean;
 };
+
+export type DashItem = {
+  icon: string;
+  title: string;
+  description: string;
+  routeType: string;
+  route: string;
+};

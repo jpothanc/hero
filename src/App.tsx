@@ -22,12 +22,9 @@ const App = () => {
         </Routes>
         <Navbar fixed="bottom">
           <div className="footer">
-            <div className="footer__left">
-              Copyright © 2023 Jessish Pothancheri.|
-            </div>
+            <div className="footer__left"></div>
             <div className="footer__right">
-              {" "}
-              Connecting to {config.app.healthcheck.healthcheckRestEndpoint}
+              Copyright © 2023 Jessish Pothancheri. All rights reserved.
             </div>
           </div>
         </Navbar>

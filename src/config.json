@@ -2,6 +2,22 @@
   "app": {
     "name": "Hero",
     "version": "0.0.1",
+    "dashItems": [
+      {
+        "title": "health check",
+        "icon": "FaHeartCirclePlus",
+        "description": "health checks for your production environment.",
+        "routeType": "internal",
+        "route": "/health"
+      },
+      {
+        "title": "dynamo",
+        "icon": "MdDynamicFeed",
+        "description": "Dynamo is a web application that allows you to configure JSON endpoints and visualize the data in a grid format for easy reading and support.",
+        "routeType": "external",
+        "route": "https://dynamo-blue.vercel.app/"
+      }
+    ],
     "healthcheck": {
       "connectWs": false,
       "queryIntervalRest": 15,
