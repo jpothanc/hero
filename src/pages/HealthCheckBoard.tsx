@@ -1,9 +1,10 @@
 import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 import { FaRegCircleCheck, FaLink, FaCircleInfo } from "react-icons/fa6";
-import { fetchHealthCheckInfo, getColor } from "../services/Helper";
+import { fetchHealthCheckInfo, getColor } from "../utils/helper";
 import { useEffect, useRef, useState } from "react";
-import { HealthCheck, HealthCheckInfo } from "../services/Types";
+import { HealthCheckInfo } from "../models/HealthCheckInfo";
+import { HealthCheck } from "../models/HealthCheck";
 
 import PopUp, { ModalRef } from "../components/PopUp";
 import useWebSockets from "../hooks/useHeathCheckSockets";

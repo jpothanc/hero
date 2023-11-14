@@ -1,5 +1,5 @@
 import { Badge } from "react-bootstrap";
-import { HealthCheckInfo } from "../../services/Types";
+import { HealthCheckInfo } from "../../models/HealthCheckInfo";
 type Props = {
   HealthCheckInfo: HealthCheckInfo | null;
   color: string;

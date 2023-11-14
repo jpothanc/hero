@@ -1,7 +1,7 @@
 import { useState } from "react";
 import HealthMenuBar from "../components/healthcheck/HealthMenuBar";
 import HealthItems from "../components/healthcheck/Healthtems";
-import { HealthCheck } from "../services/Types";
+import { HealthCheck } from "../models/HealthCheck";
 import useWebSockets from "../hooks/useHeathCheckSockets";
 import { FaHeartCirclePlus } from "react-icons/fa6";
 

@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Card, OverlayTrigger, Popover } from "react-bootstrap";
 import { FaCircleInfo, FaLink, FaDatabase } from "react-icons/fa6";
-import { HealthCheck, HealthCheckInfo } from "../../services/Types";
-import { getColor } from "../../services/Helper";
+import { HealthCheckInfo } from "../../models/HealthCheckInfo";
+import { HealthCheck } from "../../models/HealthCheck";
 import HealthInfoDetails from "./HealthInfoDetails";
 import HealthInfoQuickDetails from "./HealthInfoQuickDetails";
 import { GiSpiderWeb } from "react-icons/gi";
+import { getColor } from "../../utils/helper";
+
 type Props = {
   healthCheck: HealthCheck | null;
 };

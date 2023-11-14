@@ -1,6 +1,6 @@
 import { Button, Card } from "react-bootstrap";
-import { DashItem } from "../services/Types";
-import { getIconByName, openExternalLink } from "../services/Helper";
+import { DashItem } from "../models/HealthCheckInfo";
+import { getIconByName, openExternalLink } from "../utils/helper";
 import { useNavigate } from "react-router";
 
 type Props = {

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { HealthCheck } from "../services/Types";
-import config from "../config.json";
-import { fetchHealthCheckInfo } from "../services/Helper";
+import { HealthCheck } from "../models/HealthCheck";
+import config from "../config/config.json";
+import { fetchHealthCheckInfo } from "../utils/helper";
 
 let intervalId: NodeJS.Timeout | undefined = undefined;
 const interval = config.app.healthcheck.queryIntervalRest * 1000;

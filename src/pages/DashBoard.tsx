@@ -1,4 +1,4 @@
-import config from "../config.json";
+import config from "../config/config.json";
 import DashBoardItem from "../components/DashBoardItem";
 
 const DashBoard = () => {

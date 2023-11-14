@@ -1,9 +1,9 @@
 import { IconType } from "react-icons";
-import { HealthCheck } from "./Types";
+import { HealthCheck } from "../models/HealthCheck";
 import React from "react";
 import { FaCircleInfo, FaDatabase, FaHeartCirclePlus } from "react-icons/fa6";
 import { GiSpiderWeb } from "react-icons/gi";
-import config from "../config.json";
+import config from "../config/config.json";
 import { MdDynamicFeed } from "react-icons/md";
 
 export async function fetchHealthCheckInfo(): Promise<HealthCheck> {

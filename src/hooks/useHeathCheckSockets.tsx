@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { diContainer } from "../services/Container";
 import { IStompClient } from "../services/StompClient";
-import { HealthCheck } from "../services/Types";
-import config from "../config.json";
+import { HealthCheck } from "../models/HealthCheck";
+import config from "../config/config.json";
 
 type Props = {
   setHealthCheck: (arg0: HealthCheck) => void;
