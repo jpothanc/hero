@@ -4,7 +4,6 @@ import HeroNavBar from "./components/HeroNavBar";
 import PersonalNotes from "./pages/PersonalNotes";
 import TeamNotes from "./pages/TeamNotes";
 import { Navbar } from "react-bootstrap";
-import config from "./config.json";
 
 import HealthCheckDashBoard from "./pages/HealthCheckDashBoard";
 import DashBoard from "./pages/DashBoard";
