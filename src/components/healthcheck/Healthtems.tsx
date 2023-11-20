@@ -35,7 +35,7 @@ const HealthItems = ({ healthCheck }: Props) => {
           bg={getColor(item.healthy)}
           key={item.name}
           text="white"
-          style={{ fontSize: "10px" }}
+          style={{ fontSize: "10px", width: "15rem" }}
           className="mb-1"
         >
           <Card.Header>
