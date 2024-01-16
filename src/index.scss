@@ -51,10 +51,10 @@ h1 {
   //   justify-self: flex-start;
   //   margin: auto;
   // }
-  .hc-container__body {
-    flex-direction: column;
-    border: #1e88e5 1px solid;
-  }
+  // .hc-container__body {
+  //   flex-direction: column;
+  //   border: #1e88e5 1px solid;
+  // }
 }
 .hc-info-container {
   padding: "16px";
@@ -68,6 +68,7 @@ h1 {
   font-weight: 600;
   background-color: #b3b1ae;
   padding-right: 2px;
+ 
 }
 .dash-container {
   display: flex;
@@ -97,6 +98,8 @@ h1 {
   font-weight: 600;
   padding: 10px;
   margin: 0px auto;
+   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hc-item {
