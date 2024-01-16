@@ -15,4 +15,5 @@ Dashboard
 ![image](https://github.com/jpothanc/hero/assets/70871841/fc0fe84b-4aec-44bc-9faa-abe9c6a66d75)
 
 Health Check Dashboard
-![image](https://github.com/jpothanc/hero/assets/70871841/6e84d0c7-8b67-4239-969b-a9145660d6eb)
+![image](https://github.com/jpothanc/hero/assets/70871841/aad51df0-edf4-4b98-a3af-d29a3dbd9216)
+
