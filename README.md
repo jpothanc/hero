@@ -12,7 +12,7 @@ Hero seamlessly integrates with a Java-based health check service, leveraging We
 - **Real-time Updates**: Utilizes WebSockets for immediate, dynamic health updates on system components.
 
 Dashboard
-![image](https://github.com/jpothanc/hero/assets/70871841/fc0fe84b-4aec-44bc-9faa-abe9c6a66d75)
+![image](https://github.com/jpothanc/hero/assets/70871841/fc0fe84b-4aec-44bc-9faa-abe9c6a66d75){width=300px height=200px}
 
 Health Check Dashboard
 ![image](https://github.com/jpothanc/hero/assets/70871841/6e84d0c7-8b67-4239-969b-a9145660d6eb)
