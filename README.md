@@ -10,3 +10,10 @@ Hero seamlessly integrates with a Java-based health check service, leveraging We
 - **Database Health Checks**: Comprehensive monitoring to ensure peak database performance.
 - **Process Monitoring**: Vigilant oversight of critical processes with instant issue notifications.
 - **Real-time Updates**: Utilizes WebSockets for immediate, dynamic health updates on system components.
+
+Dashboard
+![image](https://github.com/jpothanc/hero/assets/70871841/fc0fe84b-4aec-44bc-9faa-abe9c6a66d75)
+
+Health Check Dashboard
+![image](https://github.com/jpothanc/hero/assets/70871841/aad51df0-edf4-4b98-a3af-d29a3dbd9216)
+
