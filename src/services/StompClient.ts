@@ -16,7 +16,7 @@ export class StompClient implements IStompClient {
     url: string,
     callback: (frame: IFrame) => void
   ): Promise<void> {
-    console.log("StompClient connecting");
+    console.log("StompClient connecting" + url);
     this.client = new Client({
       brokerURL: url,
       debug: (str) => {

@@ -22,8 +22,9 @@ const useWebSockets = ({ setHealthCheck }: Props) => {
           config.app.healthcheck.healthcheckWsTopic,
           (message) => {
             console.log(`Received message: ${message.body}`);
-            const data = JSON.parse(message.body) as HealthCheck;
-            setHealthCheck(data);
+            //Could not get Azure Websocket to work, so commented out the following line
+            //const data = JSON.parse(message.body) as HealthCheck;
+            //setHealthCheck(data);
           }
         );
       }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import HealthMenuBar from "../components/healthcheck/HealthMenuBar";
 import HealthItems from "../components/healthcheck/Healthtems";
 import { HealthCheck } from "../models/HealthCheck";
+import { LoadingStatus } from "../models/LoadingStatus";
 import useWebSockets from "../hooks/useHeathCheckSockets";
 import { FaHeartCirclePlus } from "react-icons/fa6";
 
@@ -9,8 +10,13 @@ import useHealthCheckRest from "../hooks/useHealthCheckRest";
 
 const HealthCheckDashBoard = () => {
   const [healthCheck, setHealthCheck] = useState<HealthCheck | null>(null);
+  const [loadingStatus, setLoadingStatus] = useState<LoadingStatus>({
+    loading: false,
+    error: false,
+    errorMessage: "",
+  });
 
-  useHealthCheckRest({ setHealthCheck });
+  useHealthCheckRest({ setHealthCheck, setLoadingStatus });
   useWebSockets({ setHealthCheck });
 
   return (
@@ -22,7 +28,10 @@ const HealthCheckDashBoard = () => {
           </div>
           <div className="dash-text">health checks</div>
         </div>
-        <HealthMenuBar healthCheck={healthCheck} />
+        <HealthMenuBar
+          healthCheck={healthCheck}
+          loadingStatus={loadingStatus}
+        />
       </div>
       <div className="hc-container__body">
         <HealthItems healthCheck={healthCheck} />
